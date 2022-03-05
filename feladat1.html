@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. feladat</title>
+</head>
+<body>
+    <style>
+        form{
+            background-color: bisque;
+            border: solid gray;
+            width: 300px;
+            height: 120px;
+        }
+
+        form p{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+    </style>
+    <h3>1. feladat:</h3><br>
+    <form name="szemely">    
+        <p id="teljesnev"></p>
+        <p id="eletkor"></p>
+        <p id="hobby"></p>
+    </form>
+    
+    
+    <script>
+        class szemely {
+            #vezeteknev;
+            #keresztnev;
+            #eletkor;
+            #hobby;
+
+            constructor(vezeteknev, keresztnev, eletkor, hobby){
+                this.#vezeteknev = vezeteknev;
+                this.#keresztnev = keresztnev;
+                this.#eletkor = eletkor;
+                this.#hobby = hobby;
+                
+            }
+
+            teljesnev(){
+                return this.#vezeteknev + " " + this.#keresztnev;
+            } 
+
+            setHobby(hobby){
+                this.#hobby = hobby;
+            }
+
+            eletkor(){
+                return this.#eletkor;
+            }
+
+            getHobby(){
+                return this.#hobby;
+            }         
+
+        }
+
+        
+
+
+        let kisskati = new szemely("Kiss","Katalin",28,""); 
+        kisskati.setHobby("futás"); 
+        document.getElementById("teljesnev").innerHTML = "Teljes neve: " + kisskati.teljesnev(); 
+        document.getElementById("eletkor").innerHTML ="Életkora: " + kisskati.eletkor(); 
+        document.getElementById("hobby").innerHTML = "Kedvenc elfoglaltsága: " + kisskati.getHobby();
+    </script>
+</body>
+</html>

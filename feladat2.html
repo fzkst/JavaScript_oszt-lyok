@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. feladat</title>
+</head>
+
+<body>
+    <h2>2. feladat</h2>
+    <label for="input_x">X:</label><br>
+    <input type="number" id="input_x"><br><br>
+    <label for="input_y">Y:</label><br>
+    <input type="number" id="input_y"><br><br>
+    <button onclick="hozzaad()">Hozzáad</button><br><br>
+
+    <script>
+        class Pont {
+            #x;
+            #y;
+            constructor(x, y) {
+                this.#x = x;
+                this.#y = y;
+            }
+
+            getX() {
+                return this.#x;
+            }
+            getY() {
+                return this.#y;
+            }
+            setX(x) {
+                if (x < 0) {
+                    alert("Csak a számtengely jobb felső részében lévő pontokat tudjuk tárolni.")
+                } else {
+                    this.#x = x;
+                }
+            }
+            setY(y) {
+                if (y < 0) {
+                    alert("Csak a számtengely jobb felső részében lévő pontokat tudjuk tárolni.")
+                } else {
+                    this.#y = y;
+                }
+            }
+            //Szöveges megfeleltése
+            toString() {
+                return `Pont: x = ${this.#x}, y = ${this.#y}`;
+            }
+
+            tavolsagAzOrigotol() {
+                return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+            }
+
+            static statikusTavolsag(p1, p2) {
+                return Math.sqrt(Math.pow(p2.getX - p1.getX) + Math.pow(p2.getY - p1.getY));
+            }
+
+        }
+
+        var pont1 = new Pont(3, 5);
+        var p1 = new Pont(2, 5);
+        var p2 = new Pont(8, 2);
+        
+        function modosit() {
+            let x = parseFloat(document.getElementById('input_x').value);
+            let y = parseFloat(document.getElementById('input_y').value);
+            pont.setX(x);
+            pont.setY(y);
+            console.log(pont);
+        }
+
+        var pontok = [];
+
+        function hozzaad() {
+            let x = parseFloat(document.getElementById('input_x').value);
+            let y = parseFloat(document.getElementById('input_y').value);
+            pont = new Pont(x, y);
+            pontok.push(pont);
+            console.table(pontok);
+        }
+    </script>
+</body>
+
+</html>
