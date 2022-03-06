@@ -30,9 +30,21 @@
     </div>
     <div class="input-group mb-3 ml-2 w-75">
         <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Kategóriája:</span>
+          <label class="input-group-text" for="kategoria">Kategóriája</label>
         </div>
-        <input type="text" class="form-control" id="kategoria" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        <select class="custom-select" id="kategoria">
+          <option selected>Válassz...</option>
+          <option value="1">Leves</option>
+          <option value="2">Főétel</option>
+          <option value="3">Pizza</option>
+          <option value="4">Egyéb</option>
+        </select>
+      </div>
+    <div class="input-group mb-3 ml-2 w-75">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Összetevője:</span>
+        </div>
+        <input type="text" class="form-control" id="osszetevok" aria-label="Default" aria-describedby="inputGroup-sizing-default">
     </div>
     <button type="button" onclick="felvetel()" class="btn btn-secondary my-2 ml-2">Felvétel</button>
 
