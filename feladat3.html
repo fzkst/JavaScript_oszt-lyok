@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>3. feladat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="./feladat3.js"></script>
+    <script src="./bootstrap/js/jquery-3.5.1.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
 </head>
-<body>
-    
+
+<body class="w-50 mx-auto hatter">
+    <header class="container jumbotron "></header>
+    <h2 class="col">Új étel felvétele</h2><br>
+    <div class="input-group mb-3 ml-2 w-75">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Az étel neve:</span>
+        </div>
+        <input type="text" class="form-control" id="nev" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3 ml-2 w-75">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Ára:</span>
+        </div>
+        <input type="text" class="form-control" id="ar" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <div class="input-group mb-3 ml-2 w-75">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Kategóriája:</span>
+        </div>
+        <input type="text" class="form-control" id="kategoria" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+    </div>
+    <button type="button" onclick="felvetel()" class="btn btn-secondary my-2 ml-2">Felvétel</button>
+
+
 </body>
+
 </html>
