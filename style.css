@@ -22,6 +22,12 @@ table{
     
 }
 
+#table2{
+    margin-top: 50px;
+    border: solid 1px;
+    
+}
+
 th{
     background-color: rgb(231, 229, 229);
 }
